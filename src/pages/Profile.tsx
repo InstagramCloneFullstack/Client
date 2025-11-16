@@ -7,7 +7,10 @@ import ProfileInfor from '@/components/profile/ProfileInfor';
 import ProfileSuggestion from '@/components/profile/ProfileSuggestion';
 import ProfileTabs from '@/components/profile/ProfileTabs';
 import type { AppDispatch } from '@/store';
-import { fetchProfileByUsername } from '@/store/slices/profileSlice/profileThunk';
+import {
+  fetchProfileByUsername,
+  fetchSavedPostsProfile,
+} from '@/store/slices/profileSlice/profileThunk';
 import { getUsersSuggestion } from '@/store/slices/suggestionSlice/suggestionThunk';
 
 function Profile() {
@@ -16,8 +19,9 @@ function Profile() {
 
   useEffect(() => {
     if (username) {
-      dispatch(fetchProfileByUsername(username!));
-      dispatch(getUsersSuggestion(username!));
+      dispatch(fetchProfileByUsername(username));
+      dispatch(getUsersSuggestion(username));
+      dispatch(fetchSavedPostsProfile(username));
     }
   }, [username]);
 

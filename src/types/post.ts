@@ -1,5 +1,4 @@
 import type { User } from '@/types/user';
-// src/types/post.ts
 
 export interface IMedia {
   id: string;

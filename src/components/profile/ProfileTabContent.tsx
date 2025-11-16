@@ -7,7 +7,6 @@ function ProfileTabContent({ tabIndex }: ProfileTabContentProps) {
   return (
     <div className="flex overflow-hidden">
       <ProfileTabSaved tabIndex={tabIndex} />
-
       <ProfileTabTagged tabIndex={tabIndex} />
     </div>
   );
