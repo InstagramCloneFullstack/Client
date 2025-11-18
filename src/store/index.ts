@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import authReducer from './slices/authSlice';
 import counterReducer from './slices/counterSlice';
+import mediaReducer from './slices/mediaSlice';
 import postReducer from './slices/postSlice';
 import profileReducer from './slices/profileSlice';
 import socketReducer from './slices/socketSlice';
@@ -19,6 +20,7 @@ export const store = configureStore({
     socket: socketReducer,
     profile: profileReducer,
     suggestion: suggestionReducer,
+    media: mediaReducer,
   },
 });
 

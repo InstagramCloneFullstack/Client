@@ -2,13 +2,14 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 
-import CreateStrokeIcon from '@/assets/icons/create-stroke.svg?react';
 import HeartSolidIcon from '@/assets/icons/heart-solid.svg?react';
 import HeartStrokeIcon from '@/assets/icons/heart-stroke.svg?react';
 import HomeSolidIcon from '@/assets/icons/home-solid.svg?react';
 import HomeStrokeIcon from '@/assets/icons/home-stroke.svg?react';
 import SearchSolidIcon from '@/assets/icons/search-solid.svg?react';
 import SearchStrokeIcon from '@/assets/icons/search-stroke.svg?react';
+import YoutubeSolidIcon from '@/assets/icons/youtube-solid.svg?react';
+import YoutubeStrokeIcon from '@/assets/icons/youtube-stroke.svg?react';
 import AvatarStory from '@/components/AvatarStory';
 import type { AppDispatch, RootState } from '@/store';
 import { getProfile } from '@/store/slices/authSlice/authThunk';
@@ -25,17 +26,17 @@ function TabBar() {
 
   return (
     <div className="bg-base-300 flex h-[50px]">
-      <div className="flex flex-1 items-center justify-center">
+      <Link to={`/`} className="flex flex-1 items-center justify-center">
         {pathname === '/' ? <HomeSolidIcon /> : <HomeStrokeIcon />}
-      </div>
+      </Link>
 
       <div className="flex flex-1 items-center justify-center">
         {pathname === '/search' ? <SearchSolidIcon /> : <SearchStrokeIcon />}
       </div>
 
-      <div className="flex flex-1 items-center justify-center">
-        <CreateStrokeIcon />
-      </div>
+      <Link to={`/reels`} className="flex flex-1 items-center justify-center">
+        {pathname === '/reels' ? <YoutubeSolidIcon /> : <YoutubeStrokeIcon />}
+      </Link>
 
       <div className="flex flex-1 items-center justify-center">
         {pathname === '/notification' ? <HeartSolidIcon /> : <HeartStrokeIcon />}

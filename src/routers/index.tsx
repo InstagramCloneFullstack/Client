@@ -10,6 +10,7 @@ const Register = lazy(() => import('@/pages/Register'));
 const Main = lazy(() => import('@/pages/Main'));
 const ProfileEdit = lazy(() => import('@/pages/ProfileEdit'));
 const Profile = lazy(() => import('@/pages/Profile'));
+const CreatePost = lazy(() => import('@/pages/CreatePost'));
 
 export const router = createBrowserRouter([
   {
@@ -42,5 +43,9 @@ export const router = createBrowserRouter([
   {
     path: '/profile-edit',
     element: <ProfileEdit />,
+  },
+  {
+    path: '/post/create/style',
+    element: <CreatePost />,
   },
 ]);

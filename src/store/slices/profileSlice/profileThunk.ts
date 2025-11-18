@@ -25,9 +25,9 @@ export const fetchProfileByUsername = createAsyncThunk(
         provider: 'local', // local | google | facebook | github
 
         stats: {
-          posts: 54,
-          followers: 834,
-          following: 162,
+          posts: 5,
+          followers: 1000,
+          following: 200,
         },
 
         createdAt: '2022-01-01T00:00:00.000Z',

@@ -11,6 +11,7 @@ function useToast() {
     const duration = toast.duration || DEFAULT_TIMEOUT;
 
     dispatch(add({ id, duration, type: 'info', ...toast }));
+    return id;
   };
 
   const removeToast = (id: number) => {
